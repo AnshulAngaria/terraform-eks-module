@@ -3,9 +3,9 @@
 #
 
 provider "aws" {
-  region  = "ap-south-1"
-  shared_credentials_file 	= "~/.aws/credentials"
-  profile                	= "default"
+  region  = var.region
+  shared_credentials_file 	= var.credentials_file
+  profile                	= var.credentials_profile
 }
 
 
