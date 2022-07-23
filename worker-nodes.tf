@@ -43,7 +43,7 @@ resource "aws_eks_node_group" "demo" {
   node_group_name = "demo"
   node_role_arn   = aws_iam_role.node_role.arn
   subnet_ids      = aws_subnet.demo[*].id
-  instance_types  = ["t2.micro"]
+  instance_types  = [var.instance_types]
 
   scaling_config {
     desired_size = 1
