@@ -28,5 +28,9 @@ variable "credentials_file" {
 variable "credentials_profile" {
   default = "default"
   type = string
-  
+}
+
+variable "node_group_ami" {
+  default = "AL2_x86_64"
+  type = string
 }
